@@ -1,5 +1,8 @@
 // https://discordapp.com/oauth2/authorize?client_id=604565399253680138&permissions=39936&scope=bot
 
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
 const Discord = require('discord.js');
 const Scheduler = require('./scheduler.js').Scheduler;
 const events = require('./events.json');
@@ -8,7 +11,7 @@ var http = require("http");
  
 http.createServer(function(request, response){
     response.end();
-}).listen(80);
+}).listen(server_port);
 
 let client = null;
 
