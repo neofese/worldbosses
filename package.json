@@ -1,0 +1,16 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "mkdir public && echo 'World Bosses' > public/index.html"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "opusscript": "0.0.6"
+  }
+}
